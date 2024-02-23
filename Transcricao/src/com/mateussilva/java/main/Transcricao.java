@@ -8,12 +8,10 @@ import java.io.FileWriter;
 public class Transcricao {
 
     /*
-     * Autor: Mateus José da Silva n° 23
-     *
      * Input: Fita de DNA
      * Output: RNA mensageiro
      * Teste: GGC.CGA.TTA.ATG.CTT.AAA.TGC.GGC.CTA.AAT.TAT
-     */
+    */
 
     public static void main(String[] args) {
 
@@ -21,7 +19,7 @@ public class Transcricao {
             String anti_sense, rna = "";
 
             BufferedReader entrada = new BufferedReader(
-                    new FileReader("src//com//mateussilva//java//main//entrada(Transcricao).txt"));
+                    new FileReader("transcricao//src//com//mateussilva//resources//entrada(transcricao).txt"));
             anti_sense = entrada.readLine();
             entrada.close();
             anti_sense = anti_sense.toUpperCase();
@@ -37,11 +35,11 @@ public class Transcricao {
             }
 
             BufferedWriter saida = new BufferedWriter(
-                    new FileWriter("src//com//mateussilva//java//main//saida(Transcricao)-Mateus_Jose_da_Silva.txt"));
+                    new FileWriter("transcricao//src//com//mateussilva//resources//saida(transcricao).txt"));
             saida.write(rna);
             saida.close();
-        } catch (Exception e1) {
-            e1.printStackTrace();
+        } catch (Exception e) {
+            e.printStackTrace();
         }
     }
 
